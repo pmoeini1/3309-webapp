@@ -2,9 +2,20 @@ export default function Query(action, data) {
     let result;
     try {
         // connect to DB
+        var mysql = require('mysql')
+        var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'dbuser',
+        password : 's3kreee7',
+        database : 'my_db'
+        });
+
+        connection.connect()
 
         // make the query that finds players of a city
         if (action===1) {
+            var query = connection.query("SELECT * FROM Athlete a, Team t WHERE t.cityID =" + data +
+            " AND t.tName = a.tName");
             
         }
         // find elite players by position query
