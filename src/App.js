@@ -32,7 +32,6 @@ function App() {
   let dropdown = (
     <div className='dropdown'>
       <DropdownButton variant="warning" id="dropdown-basic-button" title="Select Action">
-        {/* input city; input position; input height; input age; input */}
         <Dropdown.Item onClick={
           () => {
             setAction(1);
@@ -92,13 +91,17 @@ function App() {
     </div>
   );
 
-  
+  let resultsHeader = (
+    <h1>Results: </h1>
+  );
+
 
   return (
     <div className="App">
       {quitButton}
       {dropdown}
       {input}
+      {resultsHeader}
       {display}
     </div>
   );
