@@ -20,6 +20,7 @@ export default function Query(action, data) {
         }
         // find elite players by position query
         if (action===2) {
+            
 
         }
         // find big 12 centers by height
@@ -28,6 +29,8 @@ export default function Query(action, data) {
         }
         // find athletes over a specific age
         if (action===4) {
+            result = connection.query("SELECT * FROM Athlete a WHERE a.age = "+data+ ";")
+
 
         }
         // find athletes with a specific name
