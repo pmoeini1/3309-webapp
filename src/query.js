@@ -27,6 +27,8 @@ export default function Query(action, data) {
         }
         // find athletes over a specific age
         if (action===4) {
+            result = connection.query("SELECT * FROM Athlete a WHERE a.age = "+data+ ";")
+
 
         }
         // find athletes with a specific name
