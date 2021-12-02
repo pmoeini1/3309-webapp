@@ -68,7 +68,7 @@ function App() {
             setAction(4);
             setDataName('Age');
           }
-        }>Delete Athletes Over A Specific Age</Dropdown.Item>
+        }>Find Athletes Over A Specific Age</Dropdown.Item>
         <Dropdown.Item onClick={
           () => {
             setAction(5);
