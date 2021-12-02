@@ -14,7 +14,7 @@ export default function Query(action, data) {
 
         // make the query that finds players of a city
         if (action===1) {
-            var query = connection.query("SELECT * FROM Athlete a, Team t WHERE t.cityID ='" + data +
+            result = connection.query("SELECT * FROM Athlete a, Team t WHERE t.cityID ='" + data +
             "' AND t.tName = a.tName;");
         }
         // find elite players by position query
