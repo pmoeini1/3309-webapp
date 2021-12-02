@@ -20,19 +20,18 @@ function App() {
   let empty = <div></div>
   const [display, setDisplay] = useState(empty);
   let quitButton = (
-    <div>
+    <div className='quit'>
         <Button className='quit' variant="primary" onClick={
           () => {
-            window.open('http://www.google.ca')
+            window.close();
           }
         }>Quit</Button>
       </div>
   );
 
   let dropdown = (
-    <div>
-      <DropdownButton id="dropdown-basic-button" title="Select Action">
-        {/* input city; input position; input height; input age; input */}
+    <div className='dropdown'>
+      <DropdownButton variant="warning" id="dropdown-basic-button" title="Select Action">
         <Dropdown.Item onClick={
           () => {
             setAction(1);
@@ -68,7 +67,7 @@ function App() {
   );
 
   let input = (
-    <div>
+    <div className='input'>
       <InputGroup className="mb-3">
         <InputGroup.Text id="inputGroup-sizing-default">Enter {dataName}</InputGroup.Text>
         <FormControl
@@ -92,13 +91,17 @@ function App() {
     </div>
   );
 
-  
+  let resultsHeader = (
+    <h1>Results: </h1>
+  );
+
 
   return (
     <div className="App">
       {quitButton}
       {dropdown}
       {input}
+      {resultsHeader}
       {display}
     </div>
   );
