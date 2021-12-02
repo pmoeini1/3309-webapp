@@ -98,10 +98,35 @@ function App() {
           () => {
             let queryAction = action;
             let result = Query(queryAction, data);
-            /*  
-            
-            */
-            // setDisplay(resultDisplay);
+            let items = [];
+            if (result.results && result.results.length > 0) {
+              for (let f in result.results) {
+                // result.results is an array of objects
+                let temp = []
+                for (const key in f) {
+                  temp.push(f[key]);
+                }
+                items.push(temp);
+              }
+              // items is now and array of arrays of returned values
+              let strings = []
+              for (let i in items) {
+                let temp = '';
+                for (let r in i) {
+                  temp += '\t + ' + String(r);
+                }
+                strings.push(temp);
+              }
+              // strings now holds all the strings which we wish to display
+              const displayRows = strings.map((s, i)=> {
+                return <div><p key={i}>{s}</p><br /></div>
+              });
+              setDisplay(displayRows);
+            } else {
+              // if no rows found, display message
+              const noRows = <div><p>no rows found</p></div>
+              setDisplay(noRows);
+            }
           }
         }>Query</Button>
     </InputGroup>
