@@ -90,8 +90,10 @@ function App() {
           () => {
             let queryAction = action;
             let result = Query(action, data);
-            // let resultDisplay = someShit(result) // make it into a div with all data
-            // setDisplay(resultDisplay);
+            if (result) {
+              // let resultDisplay = someShit(result) // make it into a div with all data
+              // setDisplay(resultDisplay);
+            }
           }
         }>Query</Button>
     </InputGroup>
