@@ -19,6 +19,13 @@ function App() {
   // holds data displayed to user
   let empty = <div></div>
   const [display, setDisplay] = useState(empty);
+
+  let title = (
+    <div>
+      <h1>SE3309 Assignment 4</h1>
+    </div>
+  )
+
   let quitButton = (
     <div className='quit'>
         <Button className='quit' variant="primary" onClick={
@@ -92,12 +99,13 @@ function App() {
   );
 
   let resultsHeader = (
-    <h1>Results: </h1>
+    <h2>Results: </h2>
   );
 
 
   return (
     <div className="App">
+      {title}
       {quitButton}
       {dropdown}
       {input}
