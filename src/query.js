@@ -35,6 +35,7 @@ export default function Query(action, data) {
         }
         // find athletes with a specific name
         if (action===5) {
+            result = connection.query("SELECT * FROM ATHLETE a WHERE a.aName = '" + data + "'");
 
         }
     } catch(e) {
