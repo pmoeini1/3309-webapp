@@ -20,12 +20,17 @@ function App() {
   let empty = <div></div>
   const [display, setDisplay] = useState(empty);
 
+
+  //creates title for the web page
   let title = (
     <div>
-      <h1>SE3309 Assignment 4</h1>
+      <h1>SE3309 Assignment 4
+      </h1>  
     </div>
   )
 
+
+  //Creates quit button and closes window after pressed
   let quitButton = (
     <div className='quit'>
         <Button className='quit' variant="primary" onClick={
