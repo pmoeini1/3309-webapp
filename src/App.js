@@ -98,7 +98,9 @@ function App() {
           () => {
             let queryAction = action;
             let result = Query(queryAction, data);
-            // let resultDisplay = someShit(result) // make it into a div with all data
+            /*  
+            
+            */
             // setDisplay(resultDisplay);
           }
         }>Query</Button>
