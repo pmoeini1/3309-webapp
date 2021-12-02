@@ -92,7 +92,7 @@ function App() {
           // make query
           () => {
             let queryAction = action;
-            let result = Query(action, data);
+            let result = Query(queryAction, data);
             // let resultDisplay = someShit(result) // make it into a div with all data
             // setDisplay(resultDisplay);
           }
