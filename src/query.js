@@ -1,14 +1,10 @@
-export default function Query(action, data) {
+var connection = require('./connection')
+
+function Query(action, data) {
     let result;
     try {
         // connect to DB
-        var mysql = require('mysql')
-        var connection = mysql.createConnection({
-        host     : 'localhost',
-        user     : 'dbuser',
-        password : 's3kreee7',
-        database : 'my_db'
-        });
+        // var mysql = require('mysql')
 
         connection.connect()
 
@@ -37,7 +33,9 @@ export default function Query(action, data) {
     } catch(e) {
         console.log(e);
     }
-
+    console.log(result)
     
     return result;
 }
+
+module.exports = Query;

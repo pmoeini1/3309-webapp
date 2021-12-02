@@ -7,7 +7,7 @@ import { Button,
           FormControl
 } from 'react-bootstrap';
 import React, { useState } from 'react';
-import Query from './query';
+var Query = require('./query')
 
 function App() {
   // integer holds the action that is performed for query
