@@ -42,6 +42,7 @@ function App() {
   );
 
   let dropdown = (
+    // dropdown menu allows user to select what type of query to send
     <div className='dropdown'>
       <DropdownButton variant="warning" id="dropdown-basic-button" title="Select Action">
         <Dropdown.Item onClick={
@@ -78,6 +79,7 @@ function App() {
     </div>
   );
 
+  // input bar to allow user to enter data for the query
   let input = (
     <div className='input'>
       <InputGroup className="mb-3">
@@ -92,6 +94,7 @@ function App() {
           }
         />
         <Button onClick={
+          // make query
           () => {
             let queryAction = action;
             let result = Query(action, data);
