@@ -99,7 +99,7 @@ function App() {
             let queryAction = action;
             let result = Query(queryAction, data);
             let items = [];
-            if (result.results && result.results.length > 0) {
+            if (result && result.results && result.results.length > 0) {
               for (let f in result.results) {
                 // result.results is an array of objects
                 let temp = []
