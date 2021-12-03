@@ -15,10 +15,10 @@ function connect(){
     
      // connect to DB
      connection = mysql.createConnection({
-     host     : 'localhost',
+     host     : 'DESKTOP-HBUPP52:3306',
      user     : 'root',
      password : 'Salsa7706',
-     database : 'scouting'
+     database : 'ScoutConnect'
      });
     }
     
